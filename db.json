@@ -1,0 +1,34 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "todos": [
+        {
+          "progress": "todo",
+          "title": "the newest",
+          "description": "the newest"
+        },
+        {
+          "progress": "todo",
+          "title": "newer",
+          "description": "nerwer"
+        },
+        {
+          "progress": "todo",
+          "title": "new",
+          "description": "new"
+        },
+        {
+          "progress": "todo",
+          "title": "rr",
+          "description": "rr"
+        },
+        {
+          "progress": "in progress",
+          "title": "doing this",
+          "description": "waaaaaaaaaaat"
+        }
+      ]
+    }
+  ]
+}
