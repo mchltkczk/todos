@@ -6,10 +6,12 @@ const TodoDeleteStyled = styled.div`
   bottom: 20px;
   width: 32px;
   height: 32px;
-  opacity: 0.3;
+  opacity: 0.7;
   &:hover {
-    opacity: 1;
     cursor: pointer;
+  }
+  &:active {
+    opacity: 1;
   }
   &:before,
   &:after {
@@ -17,7 +19,7 @@ const TodoDeleteStyled = styled.div`
     left: 15px;
     content: " ";
     height: 33px;
-    width: 2px;
+    width: 4px;
     background-color: black;
   }
   &:before {

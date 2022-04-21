@@ -5,8 +5,7 @@ import {
 } from "./Todo.Style";
 import { useEffect, useState } from "react";
 import TodoDelete from "./TodoDelete";
-
-
+import TodoProgressBtn from "./TodoProgressBtn";
 
 const Todo = ({ todoProgress, todosRender }) => {
   const [todos, setTodos] = useState([]);
@@ -27,14 +26,23 @@ const Todo = ({ todoProgress, todosRender }) => {
           <>
             <StyledTodo key={todo.id} progress={todo.progress}>
               <StyledTodoButton>
-                <input type="radio"></input>
+                <TodoProgressBtn
+                  todo={todo}
+                  todos={todos.todos}
+                  progress={todo.progress}
+                  setTodos={setTodos}
+                />
               </StyledTodoButton>
               <StyledTodoDescription>
                 <h3>{todo.title}</h3>
                 <p>{todo.description}</p>
               </StyledTodoDescription>
               <StyledTodoButton>
-                <TodoDelete del={todo} todos={todos.todos} setTodos={setTodos}/>
+                <TodoDelete
+                  del={todo}
+                  todos={todos.todos}
+                  setTodos={setTodos}
+                />
               </StyledTodoButton>
             </StyledTodo>
           </>

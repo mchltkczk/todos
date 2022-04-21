@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import TodoDeleteStyled from "./TodoDelete.Styled";
 
 const TodoDelete = ({ del, todos, setTodos }) => {

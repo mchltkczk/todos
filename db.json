@@ -4,10 +4,28 @@
       "id": 1,
       "todos": [
         {
-          "id": "e84f75c5-ba4d-46bf-9a7f-32756367ceda",
-          "progress": "todo",
-          "title": "nowe",
-          "description": "nowe"
+          "id": "6186a958-01d6-4506-be76-83bc1f254b63",
+          "progress": "done",
+          "title": "To jest nowe zadanie TODO",
+          "description": "Zadania jeszcze nie zacząłem robić, dlatego ma status TODO"
+        },
+        {
+          "id": "372fb269-9de1-4ccf-aa90-08252cc67a1e",
+          "progress": "done",
+          "title": "Nowe zadanie w trakcie",
+          "description": "To jest opis nowego zadania"
+        },
+        {
+          "id": "6c07f37f-97d6-4eb8-85cc-8eef12ae2035",
+          "progress": "in progress",
+          "title": "Zjeść kolację",
+          "description": "Zrobić kanapki, herbatę i deser"
+        },
+        {
+          "id": "82c6d7ed-5804-49d9-b6c0-212e0417cc9e",
+          "progress": "in progress",
+          "title": "Zadanie w trakcie",
+          "description": "Status zadania w trakcie"
         }
       ]
     }
