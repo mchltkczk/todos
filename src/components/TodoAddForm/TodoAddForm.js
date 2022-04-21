@@ -1,18 +1,22 @@
 import { StyledLoginForm } from "../LoginForm.js/LoginForm.Styled";
 import { useEffect, useState } from "react";
-import { v4 as genKey } from 'uuid';
-
+import { v4 as genKey } from "uuid";
+import TodoAddBarStyled from "./TodoAddBar.Styled";
 
 const TodoAddForm = ({ header, setTodosRender }) => {
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   const [progress, setProgress] = useState("todo");
   const [todos, setTodos] = useState({});
+  const [display, setDisplay] = useState(false)
 
   const handleTitle = (event) => setTitle(event.target.value);
   const handleDesc = (event) => setDesc(event.target.value);
   const handleProgress = (event) => setProgress(event.target.value);
 
+  const handleShowForm = () => {
+    setDisplay(!display)
+  }
   const handleSubmitTodo = (event) => {
     event.preventDefault();
     fetch(`http://localhost:3000/user/1`)
@@ -59,8 +63,9 @@ const TodoAddForm = ({ header, setTodosRender }) => {
 
   return (
     <div>
-      <h3>{header}</h3>
-      <StyledLoginForm>
+      <TodoAddBarStyled onClick={handleShowForm}>{header}</TodoAddBarStyled>
+
+      <StyledLoginForm display={display}>
         <label name="tytul">Tytuł</label>
         <input type="text" onChange={handleTitle} value={title}></input>
         <label name="opis">Opis</label>

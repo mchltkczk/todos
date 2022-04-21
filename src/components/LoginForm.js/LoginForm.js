@@ -14,7 +14,7 @@ const LoginForm = () => {
     handleLogin(login, password);
   };
   return (
-    <StyledLoginForm onSubmit={handleSubmit}>
+    <form style={{ display: 'flex', flexDirection: 'column', gap: '10px'}} onSubmit={handleSubmit}>
       <StyledInput
         type="text"
         value={login}
@@ -29,7 +29,7 @@ const LoginForm = () => {
       />
       <button type="submit">Zaloguj</button>
       <Link to="/registration">Zarejestruj się</Link>
-    </StyledLoginForm>
+    </form>
   );
 };
 

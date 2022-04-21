@@ -6,6 +6,9 @@ height: 25px;
 border-radius: 50%;
 border: 3px solid red;
 
+&:hover {
+    cursor: pointer;
+}
 &:active {
     background-color: red;
     border: 8px solid white;
