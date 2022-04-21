@@ -1,24 +1,29 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import AuthProvider from "./components/context/Auth";
 
-import Done from './routes/Done';
-import Home from './routes/Home';
-import InProgress from './routes/InProgress';
-import Todos from './routes/Todos';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import Done from "./routes/Done";
+import Home from "./routes/Home";
+import InProgress from "./routes/InProgress";
+import Todos from "./routes/Todos";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-    <Routes>
-    <Route path="/" element={<Home />} />
-    <Route path="/todo" element={<Todos />} />
-    <Route path="inprogress" element={<InProgress />} />
-    <Route path="done" element={<Done />} />
-    </Routes></BrowserRouter>
+    <AuthProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/todo" element={<Todos />} />
+          <Route path="/inprogress" element={<InProgress />} />
+          <Route path="/done" element={<Done />} />
+        </Routes>
+      </BrowserRouter>
+    </AuthProvider>
   </React.StrictMode>
 );
 

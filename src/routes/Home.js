@@ -5,17 +5,32 @@ import ContentWrapper from "../components/ContentWrapper/ContentWrapper";
 import Main from "../components/Main/Main";
 import LoginForm from "../components/LoginForm.js/LoginForm";
 import TodoAddForm from "../components/TodoAddForm/TodoAddForm";
+import { useContext } from "react";
+import { AuthContext } from "../components/context/Auth";
+import Todo from "../components/Todo/Todo";
+import { useState } from "react";
 
 const Home = () => {
+  const { isLogged } = useContext(AuthContext);
+  const [todosRender, setTodosRender] = useState(0);
   return (
     <>
       <Header />
       <Main
-        header="Zaloguj się"
+        header={isLogged ? "" : "Zaloguj się"}
         content={
           <>
-            <LoginForm /> 
-            <TodoAddForm header="Dodaj nowe zadanie:"/>
+            {isLogged ? (
+              <>
+                <TodoAddForm
+                  header="Dodaj nowe zadanie:"
+                  setTodosRender={setTodosRender}
+                />{" "}
+                <Todo todoProgress={"all"} todosRender={todosRender} />
+              </>
+            ) : (
+              <LoginForm />
+            )}
           </>
         }
       />

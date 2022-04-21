@@ -1,10 +1,11 @@
 import { StyledLoginForm } from "../LoginForm.js/LoginForm.Styled";
 import { useEffect, useState } from "react";
+import { v4 as genKey } from 'uuid';
 
-const TodoAddForm = ({ header }) => {
+
+const TodoAddForm = ({ header, setTodosRender }) => {
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
-  const [formVisible, setFormVisible] = useState("none");
   const [progress, setProgress] = useState("todo");
   const [todos, setTodos] = useState({});
 
@@ -12,19 +13,20 @@ const TodoAddForm = ({ header }) => {
   const handleDesc = (event) => setDesc(event.target.value);
   const handleProgress = (event) => setProgress(event.target.value);
 
-  const userId = 1;
-
   const handleSubmitTodo = (event) => {
     event.preventDefault();
-
     fetch(`http://localhost:3000/user/1`)
       .then((res) => res.json())
       .then((res) => setTodos(res));
-    const pushTodos = todos.todos?.map((todo) => { return todo })
+    const pushTodos = todos.todos?.map((todo) => {
+      return todo;
+    });
+
     pushTodos.unshift({
+      id: genKey(),
       progress: progress,
       title: title,
-      description: desc
+      description: desc,
     });
 
     fetch(`http://localhost:3000/user/1`, {
@@ -36,21 +38,23 @@ const TodoAddForm = ({ header }) => {
       body: JSON.stringify({
         todos: pushTodos,
       }),
-    }).then(() => {
-      setTitle("");
-      setDesc("");
     })
-    .finally((res) => {
-      fetch(`http://localhost:3000/user/1`)
-      .then((res) => res.json())
-      .then((res) => setTodos(res));
-    })
+      .then(() => {
+        setTitle("");
+        setDesc("");
+        setTodosRender(todos);
+      })
+      .finally((res) => {
+        fetch(`http://localhost:3000/user/1`)
+          .then((res) => res.json())
+          .then((res) => setTodos(res));
+      });
   };
 
-  useEffect(() => { 
+  useEffect(() => {
     fetch(`http://localhost:3000/user/1`)
-    .then((res) => res.json())
-    .then((res) => setTodos(res))
+      .then((res) => res.json())
+      .then((res) => setTodos(res));
   }, []);
 
   return (
@@ -62,12 +66,8 @@ const TodoAddForm = ({ header }) => {
         <label name="opis">Opis</label>
         <input type="text" onChange={handleDesc} value={desc}></input>
         <select onChange={handleProgress} value={progress}>
-          <option >
-            todo
-          </option>
-          <option>
-            in progress
-          </option>
+          <option>todo</option>
+          <option>in progress</option>
         </select>
         <button onClick={handleSubmitTodo} type="submit">
           Dodaj

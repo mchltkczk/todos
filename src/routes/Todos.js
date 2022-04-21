@@ -11,7 +11,7 @@ const Todos = () => {
   return (
     <>
       <Header />
-      <Main header="Zadania do wykonania ..." content={<Todo />}/>
+      <Main header="Zadania do wykonania ..." content={<Todo todoProgress={"todo"} />}/>
       <Footer />
     </>
   );
