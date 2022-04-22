@@ -15,7 +15,7 @@ const InProgress = () => {
       <Main header="Zadania w trakcie..." content={
           <>
             <TodoAddForm
-              header="Dodaj nowe zadanie:"
+              header="+"
               setTodosRender={setTodosRender}
             />{" "}
             <Todo todoProgress={"in progress"} todosRender={todosRender} />{" "}

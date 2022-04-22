@@ -5,6 +5,7 @@ const StyledLoginForm = styled.form`
     transition:  0.3s linear;
     flex-direction: column;
     gap: 10px;
+    margin-bottom: 20px;
     
 `;
 

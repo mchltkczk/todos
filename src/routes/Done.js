@@ -16,7 +16,7 @@ const Done = () => {
         content={
           <>
             <TodoAddForm
-              header="Dodaj nowe zadanie:"
+              header="+"
               setTodosRender={setTodosRender}
             />{" "}
             <Todo todoProgress={"done"} todosRender={todosRender} />{" "}

@@ -24,9 +24,19 @@ const TodoDeleteStyled = styled.div`
   }
   &:before {
     transform: rotate(45deg);
+    transition: transform .2s linear
   }
   &:after {
     transform: rotate(-45deg);
+    transition: transform .2s linear
+
   }
+  &:active:before {
+    transform: rotate(-45deg);
+  }
+  &:active:after {
+    transform: rotate(45deg);
+  }
+
 `;
 export default TodoDeleteStyled;

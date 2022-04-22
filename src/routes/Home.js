@@ -23,7 +23,7 @@ const Home = () => {
             {isLogged ? (
               <>
                 <TodoAddForm
-                  header="Dodaj nowe zadanie:"
+                  header="+"
                   setTodosRender={setTodosRender}
                 />{" "}
                 <Todo todoProgress={"all"} todosRender={todosRender} />

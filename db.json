@@ -4,8 +4,14 @@
       "id": 1,
       "todos": [
         {
-          "id": "5928701d-289b-4268-af6e-e17a379cee88",
+          "id": "3e45a969-403a-4e90-8173-c5718cea911e",
           "progress": "todo",
+          "title": "az",
+          "description": "zxzx"
+        },
+        {
+          "id": "5928701d-289b-4268-af6e-e17a379cee88",
+          "progress": "done",
           "title": "Nowe zadanie todo",
           "description": "nowe zadanie na czerwony kolor"
         },

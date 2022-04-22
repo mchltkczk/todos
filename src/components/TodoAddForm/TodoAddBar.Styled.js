@@ -1,18 +1,27 @@
 import styled from "styled-components";
 
 const TodoAddBarStyled = styled.h3`
-  border-radius: 5px;
-  height: 30px;
-  width: 500px;
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: lightblue;
-  text-align: center;
+  font-size: 50px;
+  -webkit-box-shadow: 0px 0px 30px -7px rgba(66, 68, 90, 1);
+  -moz-box-shadow: 0px 0px 30px -7px rgba(66, 68, 90, 1);
+  box-shadow: 0px 0px 30px -7px rgba(66, 68, 90, 1);
   &:hover {
-      cursor: pointer;
+    cursor: pointer;
   }
   &:active {
-      height: 30px;
-      height: 40px;
-      transition: 0.1s linear;
+    font-size: 45px;
+    transition: 0.1s linear;
+    -webkit-box-shadow: 0px 0px 86px -5px rgba(66, 68, 90, 1);
+-moz-box-shadow: 0px 0px 86px -5px rgba(66, 68, 90, 1);
+box-shadow: 0px 0px 86px -5px rgba(66, 68, 90, 1);
   }
 `;
 

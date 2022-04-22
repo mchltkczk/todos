@@ -16,7 +16,7 @@ const Todos = () => {
       <Main header="Zadania do wykonania ..." content={
           <>
             <TodoAddForm
-              header="Dodaj nowe zadanie:"
+              header="+"
               setTodosRender={setTodosRender}
             />{" "}
             <Todo todoProgress={"todo"} todosRender={todosRender} />{" "}

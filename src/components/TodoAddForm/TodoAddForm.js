@@ -2,6 +2,7 @@ import { StyledLoginForm } from "../LoginForm.js/LoginForm.Styled";
 import { useEffect, useState } from "react";
 import { v4 as genKey } from "uuid";
 import TodoAddBarStyled from "./TodoAddBar.Styled";
+import TodoStyledWrapper from "./TodoWrapper.styled";
 
 const TodoAddForm = ({ header, setTodosRender }) => {
   const [title, setTitle] = useState("");
@@ -62,7 +63,7 @@ const TodoAddForm = ({ header, setTodosRender }) => {
   }, []);
 
   return (
-    <div>
+    <TodoStyledWrapper>
       <TodoAddBarStyled onClick={handleShowForm}>{header}</TodoAddBarStyled>
 
       <StyledLoginForm display={display}>
@@ -78,7 +79,7 @@ const TodoAddForm = ({ header, setTodosRender }) => {
           Dodaj
         </button>
       </StyledLoginForm>
-    </div>
+    </TodoStyledWrapper>
   );
 };
 
