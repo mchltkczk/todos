@@ -10,7 +10,8 @@ const StyledButton = styled.div`
     color: black;
     background-color: white;
     &:hover {
-        background-color: red;
+        background-color: #e9ecef;
+        cursor: pointer;
     }
 `;
 

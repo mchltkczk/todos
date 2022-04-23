@@ -7,9 +7,12 @@ const StyledHeader = styled.div`
     font-size: 60px;
     font-weight: 800;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     border-bottom: 1px black solid;
+
 `;
+
 
 export default StyledHeader;

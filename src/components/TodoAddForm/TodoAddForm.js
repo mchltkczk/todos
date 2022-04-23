@@ -14,7 +14,7 @@ const TodoAddForm = ({ header, setTodosRender }) => {
   const handleTitle = (event) => setTitle(event.target.value);
   const handleDesc = (event) => setDesc(event.target.value);
   const handleProgress = (event) => setProgress(event.target.value);
-
+  const empty = [];
   const handleShowForm = () => {
     setDisplay(!display)
   }
@@ -50,6 +50,7 @@ const TodoAddForm = ({ header, setTodosRender }) => {
         setTodosRender(todos);
       })
       .finally((res) => {
+        pushTodos = empty;
         fetch(`http://localhost:3000/user/1`)
           .then((res) => res.json())
           .then((res) => setTodos(res));

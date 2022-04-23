@@ -4,18 +4,6 @@
       "id": 1,
       "todos": [
         {
-          "id": "c89a00a6-92ea-4ab9-8f40-69bb7143848e",
-          "progress": "todo",
-          "title": "zzz",
-          "description": "zzz"
-        },
-        {
-          "id": "40a9e89b-7a73-4b30-b54d-725265c947fe",
-          "progress": "todo",
-          "title": "asd",
-          "description": "asd"
-        },
-        {
           "id": "77807085-27fc-49e3-be50-302f0fb1bdd9",
           "progress": "in progress",
           "title": "a",
