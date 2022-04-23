@@ -4,7 +4,7 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AuthProvider from "./components/context/Auth";
-
+import FilteredTodosProvider from "./components/context/FilteredTodos";
 
 import Done from "./routes/Done";
 import Home from "./routes/Home";
@@ -15,14 +15,16 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <AuthProvider>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/todo" element={<Todos />} />
-          <Route path="/inprogress" element={<InProgress />} />
-          <Route path="/done" element={<Done />} />
-        </Routes>
-      </BrowserRouter>
+      <FilteredTodosProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/todo" element={<Todos />} />
+            <Route path="/inprogress" element={<InProgress />} />
+            <Route path="/done" element={<Done />} />
+          </Routes>
+        </BrowserRouter>
+      </FilteredTodosProvider>
     </AuthProvider>
   </React.StrictMode>
 );

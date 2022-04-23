@@ -6,9 +6,12 @@ import {
 import { useEffect, useState } from "react";
 import TodoDelete from "./TodoDelete";
 import TodoProgressBtn from "./TodoProgressBtn";
+import { FilteredTodosContext } from "../context/FilteredTodos";
+import { useContext } from "react";
 
 const Todo = ({ todoProgress, todosRender }) => {
   const [todos, setTodos] = useState([]);
+  const { filterTodos } = useContext(FilteredTodosContext);
 
   useEffect(() => {
     fetch(`http://localhost:3000/user/1`)
@@ -19,8 +22,8 @@ const Todo = ({ todoProgress, todosRender }) => {
   const renderTodos = () =>
     todos.todos?.map((todo) => {
       if (
-        (todoProgress && todoProgress === todo.progress) ||
-        todoProgress === "all"
+        (filterTodos && filterTodos === todo.progress) ||
+        filterTodos === "all"
       ) {
         return (
           <>

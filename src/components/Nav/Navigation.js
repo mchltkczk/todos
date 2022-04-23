@@ -4,29 +4,26 @@ import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../context/Auth";
 import Logout from "./Logout";
+import { useState } from "react";
 
-const Navigation = () => {
+const Navigation = ({ setFilteredTodos }) => {
   const { isLogged } = useContext(AuthContext);
 
   return (
     <StyledNav>
       <Logout />
-      <Link to="/">
-        <Button name="Home" />
-      </Link>
+      <Button name="Home" status={"all"}/>
       {isLogged && (
         <>
-          <Link to="/todo">
-            <Button indicator="red" name="Todo" />
-          </Link>
+          <Button status={"todo"} indicator="red" name="Todo" />
 
-          <Link to="/inprogress">
-            <Button indicator="yellow" name="In progress" />
-          </Link>
+          <Button
+            status={"in progress"}
+            indicator="yellow"
+            name="In progress"
+          />
 
-          <Link to="/done">
-            <Button indicator="green" name="Done" />
-          </Link>
+          <Button status={"done"} indicator="green" name="Done" />
         </>
       )}
     </StyledNav>

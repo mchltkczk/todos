@@ -9,6 +9,7 @@ import { useContext } from "react";
 import { AuthContext } from "../components/context/Auth";
 import Todo from "../components/Todo/Todo";
 import { useState } from "react";
+import { FilteredTodosContext } from '../components/context/FilteredTodos'
 
 const Home = () => {
   const { isLogged } = useContext(AuthContext);
@@ -26,7 +27,7 @@ const Home = () => {
                   header="+"
                   setTodosRender={setTodosRender}
                 />{" "}
-                <Todo todoProgress={"all"} todosRender={todosRender} />
+                <Todo todosRender={todosRender} />
               </>
             ) : (
               <LoginForm />
