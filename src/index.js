@@ -6,10 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AuthProvider from "./components/context/Auth";
 import FilteredTodosProvider from "./components/context/FilteredTodos";
 
-import Done from "./routes/Done";
 import Home from "./routes/Home";
-import InProgress from "./routes/InProgress";
-import Todos from "./routes/Todos";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -19,9 +16,6 @@ root.render(
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/todo" element={<Todos />} />
-            <Route path="/inprogress" element={<InProgress />} />
-            <Route path="/done" element={<Done />} />
           </Routes>
         </BrowserRouter>
       </FilteredTodosProvider>
