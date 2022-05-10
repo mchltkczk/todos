@@ -1,6 +1,9 @@
 import TodoDeleteStyled from "./TodoDelete.Styled";
+import { useState, useEffect } from 'react';
 
-const TodoDelete = ({ del, todos, setTodos }) => {
+const TodoDelete = ({ del, todos, setTodos, setTodosRender }) => {
+  
+
   const handleDelete = () => {
     let deleteItem = todos.findIndex((i) => i.id === del.id);
     todos.splice(deleteItem, 1);
@@ -23,6 +26,11 @@ const TodoDelete = ({ del, todos, setTodos }) => {
     
 };
 
+useEffect(() => {
+  fetch(`http://localhost:3000/user/1`)
+    .then((res) => res.json())
+    .then((res) => setTodos(res));
+}, []);
 
   return (
     <>

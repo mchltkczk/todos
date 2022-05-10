@@ -4,6 +4,8 @@ const StyledHeader = styled.div`
     @import url('https://fonts.googleapis.com/css2?family=Anek+Odia:wght@800&display=swap');    
     font-family: 'Anek Odia', sans-serif;
     height: 120px;
+    width: 700px;
+    margin: 0 auto;
     font-size: 60px;
     font-weight: 800;
     display: flex;

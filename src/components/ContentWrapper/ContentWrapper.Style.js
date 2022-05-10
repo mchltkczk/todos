@@ -6,9 +6,8 @@ width: 100%;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding-top: 20px;
-    gap: 20px;
-
+    margin-bottom: 30px;
+    
     
 
 `;

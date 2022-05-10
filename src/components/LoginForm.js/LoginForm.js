@@ -14,7 +14,7 @@ const LoginForm = () => {
     handleLogin(login, password);
   };
   return (
-    <form style={{ display: 'flex', flexDirection: 'column', gap: '10px'}} onSubmit={handleSubmit}>
+    <form style={{ display: 'flex', flexDirection: 'column', gap: '10px', alignItems: 'center'}} onSubmit={handleSubmit}>
       <StyledInput
         type="text"
         value={login}
@@ -27,7 +27,7 @@ const LoginForm = () => {
         onChange={(e) => setPassword(e.target.value)}
         placeholder="hasło"
       />
-      <button type="submit">Zaloguj</button>
+      <button style={{width: '100%', height: '30px'}} type="submit">Zaloguj</button>
       <Link to="/registration">Zarejestruj się</Link>
     </form>
   );

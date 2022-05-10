@@ -4,52 +4,58 @@
       "id": 1,
       "todos": [
         {
-          "id": "77807085-27fc-49e3-be50-302f0fb1bdd9",
-          "progress": "in progress",
-          "title": "a",
-          "description": "a"
+          "id": "4baff7cc-1d29-4222-bf2e-ee105ef9daa3",
+          "progress": "done",
+          "title": "asdasd",
+          "description": "asdasd"
         },
         {
-          "id": "02170251-7c13-44fd-9ad1-54e388440cf4",
+          "id": "e6553130-6a31-4b92-8d67-d4fb834630b8",
+          "progress": "in progress",
+          "title": "eee",
+          "description": "eee"
+        },
+        {
+          "id": "ba7f7d8e-efc8-4e1b-aaa2-8f6030f3df1d",
+          "progress": "in progress",
+          "title": "w",
+          "description": "w"
+        },
+        {
+          "id": "3dd02bfe-f069-404a-88ef-a63f3a65c796",
+          "progress": "in progress",
+          "title": "p",
+          "description": "p"
+        },
+        {
+          "id": "6955c3e4-d996-4ed5-95f7-84b62912ba09",
+          "progress": "in progress",
+          "title": "q",
+          "description": "q"
+        },
+        {
+          "id": "9c48f9d1-2b50-46ca-b80f-4b3144a5ae1a",
+          "progress": "in progress",
+          "title": "zadanko",
+          "description": "pierwsze in progress"
+        },
+        {
+          "id": "c8013047-2563-414b-a12f-8f6a079ddd0a",
           "progress": "todo",
-          "title": "nowy",
-          "description": "nowy"
+          "title": "aa",
+          "description": "aa"
         },
         {
-          "id": "6b5cab65-35b5-449b-bb34-a63ef210b1f2",
+          "id": "d33f273c-b66c-4309-8939-ec591f62aad4",
           "progress": "done",
-          "title": "zzzz",
-          "description": "zzz"
+          "title": "hh",
+          "description": "hh"
         },
         {
-          "id": "7bb589b7-be47-4791-90b9-3e7adb0e94c3",
-          "progress": "in progress",
-          "title": "Nowe",
-          "description": "Nowe"
-        },
-        {
-          "id": "3e45a969-403a-4e90-8173-c5718cea911e",
-          "progress": "todo",
-          "title": "az",
-          "description": "zxzx"
-        },
-        {
-          "id": "5928701d-289b-4268-af6e-e17a379cee88",
+          "id": "05b8d906-570b-4c57-b4fb-7bf8048c1249",
           "progress": "done",
-          "title": "Nowe zadanie todo",
-          "description": "nowe zadanie na czerwony kolor"
-        },
-        {
-          "id": "6186a958-01d6-4506-be76-83bc1f254b63",
-          "progress": "done",
-          "title": "To jest nowe zadanie TODO",
-          "description": "Zadania jeszcze nie zacząłem robić, dlatego ma status TODO"
-        },
-        {
-          "id": "6c07f37f-97d6-4eb8-85cc-8eef12ae2035",
-          "progress": "in progress",
-          "title": "Zjeść kolację",
-          "description": "Zrobić kanapki, herbatę i deser"
+          "title": "ff",
+          "description": "ff"
         }
       ]
     }

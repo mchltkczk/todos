@@ -2,11 +2,11 @@ import styled from 'styled-components';
 
 const StyledNav = styled.div`
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 5px;
-    padding: 50px 10px 50px 10px;
-    width: 200px;
-    border-right: 1px black solid;
+    padding: 20px 10px 10px 10px;
+    width: 700px;
     &:hover {
         cursor: pointer;
     }

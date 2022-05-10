@@ -11,10 +11,9 @@ const Navigation = ({ setFilteredTodos }) => {
 
   return (
     <StyledNav>
-      <Logout />
-      <Button name="Home" status={"all"}/>
       {isLogged && (
         <>
+      <Button name="All tasks" status={"all"}/>
           <Button status={"todo"} indicator="red" name="Todo" />
 
           <Button
@@ -26,6 +25,7 @@ const Navigation = ({ setFilteredTodos }) => {
           <Button status={"done"} indicator="green" name="Done" />
         </>
       )}
+      <Logout />
     </StyledNav>
   );
 };

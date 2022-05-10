@@ -8,24 +8,25 @@ const TodoAddForm = ({ header, setTodosRender }) => {
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   const [progress, setProgress] = useState("todo");
-  const [todos, setTodos] = useState({});
+  const [todos, setTodos] = useState([{}]);
   const [display, setDisplay] = useState(false)
 
   const handleTitle = (event) => setTitle(event.target.value);
   const handleDesc = (event) => setDesc(event.target.value);
   const handleProgress = (event) => setProgress(event.target.value);
-  const empty = [];
   const handleShowForm = () => {
     setDisplay(!display)
   }
+  const pushTodos = todos.todos?.map((todo) => {
+    return todo;
+  });
   const handleSubmitTodo = (event) => {
     event.preventDefault();
     fetch(`http://localhost:3000/user/1`)
       .then((res) => res.json())
       .then((res) => setTodos(res));
-    const pushTodos = todos.todos?.map((todo) => {
-      return todo;
-    });
+    console.log(pushTodos)
+    console.log(todos)
 
     pushTodos.unshift({
       id: genKey(),
@@ -48,20 +49,20 @@ const TodoAddForm = ({ header, setTodosRender }) => {
         setTitle("");
         setDesc("");
         setTodosRender(todos);
+        setTodos(todos)
       })
-      .finally((res) => {
-        pushTodos = empty;
-        fetch(`http://localhost:3000/user/1`)
-          .then((res) => res.json())
-          .then((res) => setTodos(res));
-      });
+      // .finally((res) => {
+      //   fetch(`http://localhost:3000/user/1`)
+      //     .then((res) => res.json())
+      //     .then((res) => setTodos(res));
+      // });
   };
 
   useEffect(() => {
     fetch(`http://localhost:3000/user/1`)
       .then((res) => res.json())
       .then((res) => setTodos(res));
-  }, []);
+  }, [title]);
 
   return (
     <TodoStyledWrapper>
